@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  flask-py-app:
+    image: freedafrancis/flask-app:latest
+    container_name: flask-app
+    networks:
+      - mynet
+    restart: always
+    ports:
+      - "80:5000"
+networks:
+  mynet:
